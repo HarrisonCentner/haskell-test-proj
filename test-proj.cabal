@@ -3,12 +3,9 @@ name:               test-proj
 version:            0.1.0.0
 license:            MIT
 copyright:          2025 Harrison Centner
-maintainer:         hcentner@umich.edu
+maintainer:         harrisoncent@proton.me
 author:             Harrison Centner
 category:           Web
-
--- TODO: Before hackage release.
--- A short (one-line) description of the package.
 synopsis:           A template for Haskell projects using Nix
 
 -- A longer description of the package.
@@ -29,12 +26,15 @@ common shared
 
   default-extensions:
     DataKinds
+    DeriveAnyClass
     DerivingStrategies
     DerivingVia
+    ImportQualifiedPost
     LambdaCase
     MultiWayIf
     NoStarIsType
     OverloadedStrings
+    RecordWildCards
     StrictData
     TypeFamilies
     ViewPatterns
@@ -48,12 +48,15 @@ common shared
     , directory
     , filepath
     , finitary
+    , logict
+    , mmorph
     , mtl
     , optics-core
     , profunctors
     , shower
     , text
     , time
+    , transformers
 
   hs-source-dirs:     src
   default-language:   GHC2021
@@ -62,3 +65,4 @@ executable proj
   import:         shared
   hs-source-dirs: src
   main-is:        proj.hs
+  ghc-options:    -threaded -rtsopts -with-rtsopts=-N

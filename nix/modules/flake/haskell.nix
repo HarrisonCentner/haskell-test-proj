@@ -35,6 +35,8 @@
         */
         finitary.source = "2.2.0.0"; # Hackage version
         hspec-hedgehog.source = "0.2.0.0"; # Hackage version
+        mmorph.source = "1.2.1"; # Hackage version
+        free.source = "5.2"; # Hackage version
       };
 
       # Add your package overrides here

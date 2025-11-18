@@ -1,0 +1,23 @@
+# cabal
+dist
+dist-*
+cabal.project.local
+cabal.project.local~
+
+# hakyll
+_cache
+_site
+
+# nix
+result
+result-*
+
+# vim
+*~
+*.swp
+*.swo
+
+# direnv
+.direnv
+
+/.pre-commit-config.yaml
